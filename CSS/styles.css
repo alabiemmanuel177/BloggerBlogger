@@ -1,36 +1,27 @@
 .card{
-    
-   
-    padding-bottom: 30px;
+   padding-bottom: 30px;
    height: 200px;
    padding-left: 10px;
    padding-right: 10px;
-   padding-top: 10px;
-   
+   padding-top: 10px;   
 }
-
 .cardBody{
     display: flex;
-   
-}
-
+    float: right; 
+  }
 .responsive{
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
-
-
 @media screen and (max-width: 700px) {
     .textSize{
         font-size: 12px;
     }
     .cardBody{
         display: block;
-    }
-    
+    }    
 }
-
 .textSize{
     position: relative;
     bottom: 140px;
@@ -39,9 +30,9 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .body{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* width: 80%; */
+    margin-left: 15%;
+    margin-right: 15%;
     
 }
 body{
@@ -54,7 +45,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     font-size: 20px;
     font-weight: lighter;
-    position: relative;
+    position: relativabe;
     top: 15px;
 }
 
@@ -76,8 +67,8 @@ body{
     background-color: #ddd;
     color: black;
   }
-  .topnav a.active {
-    margin-left: 10%;
+  .topnav a.active-1 {
+    margin-left: 15%;
     color: orange;
   }
   .topnav input[type=text] {    
@@ -103,7 +94,7 @@ body{
       margin-left: 5px;
       margin-right: 5px;
       color: white;
-      margin-right: 10%;
+      margin-right: 15%;
   }
   .topnav button.sign_up-btn{
       background-color: orange;
@@ -125,5 +116,60 @@ body{
     }
     .topnav input[type=text] {
       border: 1px solid #ccc;
+    }
+  }
+
+  .sub-heading{
+    margin-left:2em;
+  }
+  /* The side navigation menu */
+  .sidebar {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    /* position: fixed; */
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a.sub-heading:hover, a.active {
+    background-color: orange;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property*/
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;}
+  
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) { 
+    .sidebar a {
+      text-align: center;
+      float: none;
     }
   }
