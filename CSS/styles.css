@@ -1,7 +1,5 @@
 .card{
-    
-   
-    padding-bottom: 30px;
+   padding-bottom: 30px;
    height: 200px;
    padding-left: 10px;
    padding-right: 10px;
@@ -11,6 +9,7 @@
 
 .cardBody{
     display: flex;
+    margin-bottom: 30px;
    
 }
 
@@ -126,4 +125,30 @@ body{
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+  }
+
+  .commentcard{
+       border-bottom: 1px solid black;
+       padding: 20px;
+       background-color: white;
+       margin-bottom: 20px;
+       border-radius: 8px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-weight: lighter;
+
+
+  }
+
+
+  .commentcard h2{
+      color: rgb(49, 110, 126);
+  }
+
+  .asked{
+     text-align: right;
+  }
+
+  a{
+      text-decoration: none;
+      color: rgb(49, 110, 126) ;
   }
