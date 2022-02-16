@@ -11,7 +11,7 @@
 @media only screen and (min-width: 1200px) {}
 
 /* Based on Content  */
-@media only screen (min-width: 768px){}
+@media only screen and (min-width: 768px){}
 @media only screen and (min-width: 768px) and (max-width: 959px){}
 /* 1920×1080 (8.89%)
 1366×768 (8.44%)
