@@ -1,46 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#logo:hover{
-  background-color:transparent !important;
-  color: orange;
-}
-#btn{
-  background-color: orange;
-  border-radius: 5px;
-  border: none;
-  color: #ffffff;
-  margin: 5px;
-}
-#btn:hover{
-  background-color: rgb(228, 185, 107);
-  color: #fff;
-}
-.navbar-container{
-  background-color: #f8f9f9;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.item {
-  color: black;
-  font-size: 16px;
-  padding: 5px;
-  margin:10px;
-}
-.item:hover{
-  background-color: #ced3d6;
-  border-radius: 15px;
-  color: #ffffff;
-}
-.navbar-container input[type=text]{
-  width: 700px;
-  padding: 10px;
-  border-radius: 5px 5px;
-}
 .card{
   padding-bottom: 30px;
   height: 200px;
@@ -75,7 +32,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .body{
-  /* margin-left: 15%;   */
+  margin-left: 15%;  
 }
 body{
   background-color: whitesmoke;
@@ -92,7 +49,81 @@ body{
 }
 
 
+.topnav {
+  background-color: rgb(231, 243, 215);
+  overflow: hidden;
+  border-bottom:5px solid orange;
+}
+.topnav-content{
+margin-right: 15%;
+}
+.topnav a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Heebo;
+}
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active-1 {
+  /* margin-left: 15%; */
+  color: orange;
+}
+.topnav input[type=text] {    
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 16px;
+  font-size: 25px;
+  width: 600px;
+  border-radius: 5px  5px;
+  cursor: pointer;
+}
+.topnav button{
+    float: right;
+    padding: 10px 10px;
+    border: 0 ;
+    border-radius: 5px;
+    font-size: 20px;   
+  }
+.topnav button.login-btn{
+    background-color: orange;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    /* margin-right: 15%; */
+}
+.topnav button.sign_up-btn{
+    background-color: orange;
+    color: white;
+}
+.topnav button:hover{
+    background-color: white;
+    color: black;
+}  
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    /* float: none; */
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
 
+.sub-heading{
+  margin-left:2em;
+}
 /* The side navigation menu */
 .sidebar {
   float: left;
@@ -150,8 +181,11 @@ div.content {
       border-radius: 8px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: lighter;
+      margin-left: 15%;
       }
-
+.card-body{
+  /* margin-top: 25%; */
+}
 .commentcard h2{
     color: rgb(49, 110, 126);
 }
@@ -165,10 +199,7 @@ a{
     text-decoration: none;
     color: rgb(49, 110, 126);
 }
-.whole-body{
-  /* margin-right: 15%;
-  margin-left: 15%; */
-}
+
   /* footer column styling */
   .footer .col {
     width: 300px;
