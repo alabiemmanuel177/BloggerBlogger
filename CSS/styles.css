@@ -9,6 +9,27 @@
    
 }
 
+.card2{
+    
+   
+padding-bottom: 30px;
+ height: 200px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 10px;
+ 
+}
+.card3{
+    
+   
+  padding-bottom: 30px;
+ height: 200px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 10px;
+ 
+}
+
 .cardBody{
     display: flex;
    
@@ -59,3 +80,11 @@ body{
 }
 
 
+ @media screen and (max-width: 700px){
+   .card2{
+     display: none;
+   }
+   .card3{
+     display: none;
+   }
+ }
