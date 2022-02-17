@@ -42,16 +42,40 @@
   border-radius: 5px 5px;
 }
 .card{
+    
+   
   padding-bottom: 30px;
-  height: 200px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;   
+ height: 200px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 10px;
+ 
 }
+
+.card2{
+  
+ 
+padding-bottom: 30px;
+height: 200px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+
+}
+.card3{
+  
+ 
+padding-bottom: 30px;
+height: 200px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+
+}
+
 .cardBody{
   display: flex;
-  margin-bottom: 30px;
-  
+ 
 }
 
 .responsive{
@@ -59,14 +83,18 @@
   height: auto;
   border-radius: 5px;
 }
+
+
 @media screen and (max-width: 700px) {
   .textSize{
       font-size: 12px;
   }
   .cardBody{
       display: block;
-  }    
+  }
+  
 }
+
 .textSize{
   position: relative;
   bottom: 140px;
@@ -74,7 +102,12 @@
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.body{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
 body{
   background-color: whitesmoke;
 }
@@ -85,8 +118,18 @@ body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
   font-size: 20px;
   font-weight: lighter;
-  position: relativabe;
-  top: 15px;
+  position: relative;
+  /* top: px; */
+}
+
+
+@media screen and (max-width: 700px){
+ .card2{
+   display: none;
+ }
+ .card3{
+   display: none;
+ }
 }
 
 
@@ -124,7 +167,7 @@ div.content {
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-/* @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -132,14 +175,14 @@ div.content {
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
-} */
+}
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-/* @media screen and (max-width: 400px) { 
+@media screen and (max-width: 400px) { 
   .sidebar a {
     text-align: center;
     float: none;
-  }} */
+  }}
 
 /* .card-body{
   margin-top: 25%;
@@ -195,45 +238,95 @@ a{
     font-family: Arial, Helvetica, Sans-serif;
   }
   /* footer color */
-  .footer{
-    background-color: #333;
-    margin-top: 40px;
-    
-    }
-  /* centralization of footer content */
-  .contain{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      justify-content: space-evenly;
-      padding: 20px;
-      
-  }
-  /* copyright design code */
-  .lastlayer{
-      text-align: center;
-      color: #999999;
-      padding: 10px;
-      background-color: #333;
-      
-  }
-
-  .footer .contain .col ul li{
-    list-style-type: none;
-    color: #999999;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  .footer .contain{
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer-container{
+    background-color:#232629;
+    padding: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    /* justify-content: flex-end; */
+    /* align-items:center ;
+    justify-items: center; */
+    /* justify-content: center; */
+    
+}
+.footer-item {
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    margin:10px;
+}
+
+.footer-content-container{
+    padding-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.items-1,.items-2,.items-3,.items-4{
+    padding: 5px;            
+}
+.items-1:hover{
+    color: orange;
+}.items-2:hover{
+    color: orange;
+}.items-3:hover{
+    color: orange;
+}.items-4:hover{
+    color: orange;
+}
+@media screen and  (max-width: 700px){
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-content-container{
+        display: flex;
+    }
+    .items-1,.items-2,.items-3,.items-4{
+        padding: 10px;            
+    }
+}
+
+
+   
+  @media screen and (max-width : 700px){
+
+    .item-3{
+      display: none;
+
+    }
+    .item-4{
+      display: none;
+    }
+
+    .Search-item{
+    
+    display: none;
+  
+    }
+
   }
 
-    
- 
-
-  @media screen and (max-width: 700px){
-    .sidebar{
-      display: none;
+  @media screen and (min-width: 600px) {
+    .stuff {
+      display:none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .stuff {
+      font-size: 10px;
+      padding-left: 12px;
+      padding-right: 12px;
+      background-color: orange;
+      border: 1px solid orange;
+      color: white;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-radius: 5px;
     }
   }
