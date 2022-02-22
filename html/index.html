@@ -5,9 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="..\CSS\styles.css" />
+        <script src="..\JavaScript\index.js"></script>
 		<title>BloggerBlogger</title>
 	</head>
-	<body>
+	<body onload="request()">
 		<div class="navbar-container">
 			
             <div class="dropdown">
@@ -62,18 +63,15 @@
                 
 				<!-- top card end -->
 				<!-- comment card begins -->
-			<div class="cardholder">
-                <div class="commentCard">
+                
+			<div class="overflow"><div id="cardholder" class="cardholder"></div>
+                <!-- <div class="commentCard">
                     <p>0 votes 0 answers 2views</p>
-                    <h2>
-                        Trying to write test case in Cucumber where I use one or more
-                        pieces of data
+                    <h2 id='result'>
+                        
                     </h2>
-                    <h3>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-                        tempore autem nisi modi ea iusto, aperiam quaerat praesentium
-                        sint, accusamus est odit earum dolore neque ullam vitae rem
-                        maiores commodi.
+                    <h3 id="stuff">
+                        
                     </h3>
                     <p class="posted-by">
                         <span><a href="#">Eugene Maltsev</a> </span> 23 asked 5 secs ago
@@ -81,15 +79,11 @@
                 </div>
                 <div class="commentCard">
                     <p>0 votes 0 answers 2views</p>
-                    <h2>
-                        Trying to write test case in Cucumber where I use one or more
-                        pieces of data
+                    <h2 id='result'>
+                        
                     </h2>
-                    <h3>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-                        tempore autem nisi modi ea iusto, aperiam quaerat praesentium
-                        sint, accusamus est odit earum dolore neque ullam vitae rem
-                        maiores commodi.
+                    <h3 id="stuff">
+                        
                     </h3>
                     <p class="posted-by">
                         <span><a href="#">Eugene Maltsev</a> </span> 23 asked 5 secs ago
@@ -97,20 +91,16 @@
                 </div>
                 <div class="commentCard">
                     <p>0 votes 0 answers 2views</p>
-                    <h2>
-                        Trying to write test case in Cucumber where I use one or more
-                        pieces of data
+                    <h2 id='result'>
+                        
                     </h2>
-                    <h3>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-                        tempore autem nisi modi ea iusto, aperiam quaerat praesentium
-                        sint, accusamus est odit earum dolore neque ullam vitae rem
-                        maiores commodi.
+                    <h3 id="stuff">
+                        
                     </h3>
                     <p class="posted-by">
                         <span><a href="#">Eugene Maltsev</a> </span> 23 asked 5 secs ago
                     </p>
-                </div>
+                </div> -->
 
 
             </div>
@@ -154,5 +144,6 @@
             </div>
         </div>
 	    <!-- end of footer  -->
+        <script src="..\JavaScript\index.js"></script>
 	</body>
 </html>
