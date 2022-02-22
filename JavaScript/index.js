@@ -4,14 +4,12 @@ function request(){
             return response.json()
         })
         .then((response) => {
-            console.log(response)
+            // console.log(response)
             var result = document.getElementById('cardholder')            
             response.forEach(element => {  
-                    console.log(element)
-                result.appendChild(cardHolder(element))
-                console.log(element)                
+                    // console.log(element)
+                result.appendChild(cardHolder(element))                                
         })
-        
         })
     }
 function cardHolder(element){
