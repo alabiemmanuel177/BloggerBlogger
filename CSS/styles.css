@@ -387,6 +387,8 @@ a{
   flex-direction: row;
   /* margin: 50px; */
   flex-wrap: wrap;
+  justify-content: center;
+
  }
  .album-card-1{
    width: 400px;
