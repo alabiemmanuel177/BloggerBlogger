@@ -369,3 +369,48 @@ a{
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+ .album-head {
+   font-size: 35px;
+   color: #fff;
+   
+ }
+ .pageBody{
+   text-align: center;
+   background-color: rgb(235, 205, 151);
+   /* width: 80%; */
+   margin-right: 10%;
+   margin-left: 10%;
+   padding-top: 50px;
+ }
+ .album-body{
+  display: flex;
+  flex-direction: row;
+  /* margin: 50px; */
+  flex-wrap: wrap;
+ }
+ .album-card-1{
+   width: 400px;
+   background-color: #fff;
+   margin: 50px;
+   height: 300px;
+ }
+ .pagePhotoBody{
+  text-align: center;
+  background-color: rgb(182, 212, 224);
+  /* width: 80%; */
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-top: 50px;
+}
+.photo-body{
+ display: flex;
+ flex-direction: row;
+ /* margin: 50px; */
+ flex-wrap: wrap;
+}
+.photo-card-1{
+  width: 400px;
+  background-color: #fff;
+  margin: 50px;
+  height: 300px;
+}
