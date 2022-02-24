@@ -314,13 +314,13 @@ a{
 
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 700px) {
     .stuff {
       display:none;
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .stuff {
       font-size: 10px;
       padding-left: 12px;
@@ -417,4 +417,177 @@ a{
   background-color: #fff;
   margin: 50px;
   height: 300px;
+}
+
+.pstPic {
+  /* padding: 150px; */
+  border-top: 20px solid white;
+  border-bottom: 20px solid white;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+  width: 50%;
+  /* padding-bottom: 20px; */
+  border-radius: 5px;
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.usrDetails {
+   background-color: white;
+  width: 30%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+   height: 250px !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
+}
+
+.picHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  
+  /* width: 80%; */
+}
+body {
+  background-color: whitesmoke;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.stuff1 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.top {
+  background-color: orange;
+  border-radius: 5px 5px 0px 0px;
+  padding: 5px;
+  padding-left: 20px;
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .top {
+    font-size: 10px;
+  }
+  .pstPic h3 {
+    font-size: 15px;
+  }
+  .pstPic h5 {
+    font-size: 10px;
+  }
+  .bottom h4 {
+    font-size: 10px;
+  }
+  .usrDetails {
+    height: 200px !important;
+  }
+}
+
+.bottom {
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+  /* padding: 10px; */
+}
+
+.userHolder {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.userImg {
+  position: relative;
+  /* margin-left: 150px;] */
+  /* width: 50%; */
+  
+
+}
+
+.userName h4 {
+  position: relative;
+  /* width: 50%; */
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .usrDetails{
+        display: none;
+    }
+
+    .pstPic{
+        width: 100%;
+    }
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .userName h4 {
+        font-size: 10px;
+
+
+}
+}
+.static {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 15px;
+}
+
+.p2 {
+  position: relative;
+  top: 5px;
+  margin-bottom: 15px;
+}
+
+.btn-lenght {
+  width: 100%;
+  background-color: orange;
+  border: 1px solid orange;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 100px;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.btn-spc{
+    /* padding: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    
+
+}
+
+.space{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.underspace{
+  margin-bottom: 20px;
 }
