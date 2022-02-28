@@ -13,8 +13,9 @@ function request(){
         })
     }
 function cardHolder(element){
-    const holder = `<div class="commentCard">
+    const holder = `<a href="./post.html"><div class="commentCard">
         <p> ${element.id} votes 0 answers 2views</p>
+        <a>Username</a>
         <h2 id='result'>
             ${element.title}
         </h2>
@@ -24,6 +25,6 @@ function cardHolder(element){
         <p class="posted-by">
             <span><a href="#">${element.name}</a> </span> 23 asked 5 secs ago
         </p>
-    </div>`
+    </div></a>`
 return new DOMParser().parseFromString(holder, 'text/html').firstChild
 }
