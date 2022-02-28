@@ -97,5 +97,30 @@ function displayInfo(element){
     return new DOMParser().parseFromString(infoPage, 'text/html').firstChild
 }
 
+ function albumPageRequest(){
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     const userID = urlParams.get('UserID')
+     console.log(userID)
+     fetch(`${APIurl}/users/${userID}/albums`)
+     .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        console.log(response)
+        var result = document.getElementById('album-body')
+        // console.log(response)
+        response.forEach(element => {
+                result.appendChild(albumPageDisplay(response))                                
+        })
+    })
+}
+
+ function albumPageDisplay(element){
+     const AlbumPage = `
+     <div class="album-card-1">${element.title}</div>
+   `
+     return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
+ }
 
 
