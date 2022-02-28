@@ -102,8 +102,8 @@ padding-top: 10px;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.body{
-  width: 80%;
+.body{ 
+  width: 80%;    
   margin-left: 10%;
   margin-right: 10%;
   
@@ -579,11 +579,59 @@ body {
 
 }
 
-.space{
+.Margin-style{
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
-.underspace{
+.Margin-style2{
   margin-bottom: 20px;
+}
+.btn-lenght:hover{
+      background-color: rgb(255, 115, 0);
+}
+
+.Comments{
+  width: 40%;
+  
+  background-color: rgb(247, 230, 199);
+  padding: 10px;
+  margin-left: 15%;
+  /* border: 5px solid white; */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-right: 10%;
+}
+
+.comments{
+  display: block;
+  flex-direction: column;
+  /* margin-left: 15%; */
+  
+  
+}
+
+.block{
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media screen and (max-width: 700px) {
+  .Comments{
+    width: 80%;
+    margin-left: 10%;
+    margin-left: 10%;
+  }
+
+  .commentsTitle{
+    margin-left: 60%;
+    margin-bottom: 20px;
+  
+}
+}
+
+.commentsTitle{
+    margin-left: 31%;
+    margin-bottom: 20px;
 }
