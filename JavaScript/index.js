@@ -1,5 +1,6 @@
-function request(){      
-        fetch('https://jsonplaceholder.typicode.com/posts')
+const APIurl = 'https://jsonplaceholder.typicode.com'
+function postRequest(){      
+        fetch(`${APIurl}/posts`)
         .then(function(response){
             return response.json()
         })
@@ -8,13 +9,13 @@ function request(){
             var result = document.getElementById('cardholder')            
             response.forEach(element => {  
                     // console.log(element)
-                result.appendChild(cardHolder(element))                                
+                result.appendChild(postDisplay(element))                                
         })
         })
     }
-function cardHolder(element){
-    const holder = `<a href="./post.html"><div class="commentCard">
-        <p> ${element.id} votes 0 answers 2views</p>
+function postDisplay(element){
+    const holder = `<a href="./post.html?postID=${element.id}" ><div class="commentCard">
+        <p id= "postId"> ${element.id} </p>
         <a>Username</a>
         <h2 id='result'>
             ${element.title}
@@ -27,4 +28,29 @@ function cardHolder(element){
         </p>
     </div></a>`
 return new DOMParser().parseFromString(holder, 'text/html').firstChild
+}
+
+function commentRequest(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const postID = urlParams.get('postID')
+    // console.log(postID);
+    fetch(`${APIurl}/posts/${postID}/comments`)
+    .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        // console.log(response)
+        var result = document.getElementById('commentholder')
+        response.forEach(element => {
+            result.appendChild(commentDisplay(element))
+            // console.log(element)
+        })
+    })
+}
+
+function commentDisplay(element){
+    const commentholder = `<h3 class="Margin-style">${element.name}</h4>
+    <h4 class="Margin-style2">${element.body}</h4>`
+    return new DOMParser().parseFromString(commentholder, 'text/html').firstChild
 }
