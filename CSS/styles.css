@@ -194,9 +194,8 @@ div.content {
   justify-content: space-evenly;
   margin-top: 150px;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   
-
 }
 .Ccard h2{
     color: rgb(49, 110, 126);
@@ -209,25 +208,20 @@ div.content {
   border-radius: 8px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: lighter;
-  /* width: 80%; */
-  margin-right: 10%;
-  margin-left: 10%;
   
+  
+  /* width:100%; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .posted-by{
   text-align: right;
 }
-
-
-
 a{
     text-decoration: none;
     color: rgb(49, 110, 126);
 }
-
- 
- 
-  .clearfix {
+.clearfix {
     clear: both;
   }
   /* footer responsiveness */
