@@ -74,5 +74,28 @@ function postPageDisplay(element){
     return new DOMParser().parseFromString(postPage, 'text/html').firstChild
 }
 
+function getUserInfo(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userID = urlParams.get('userID')
+    console.log(userID)
+    fetch(`${APIurl}/users/${userID}`)
+    .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        // console.log(response)
+        var result = document.getElementById('userName')
+                result.appendChild(displayInfo(response))                                
+        })
+}
+
+function displayInfo(element){
+    const infoPage = ` <h4>${element.name}</h4>
+    <h4>${element.username}</h4>
+    <h4>${element.email}</h4>`
+    return new DOMParser().parseFromString(infoPage, 'text/html').firstChild
+}
+
 
 

@@ -8,7 +8,7 @@
         <script src="..\JavaScript\index.js"></script>
 		<title>Posts</title>
 	</head>
-	<body onload="commentRequest(), postPageRequest()">
+	<body onload="commentRequest(), postPageRequest(), getUserInfo()">
 		<div class="navbar-container">			
             <div class="dropdown">
                 <div class="dropdown item-1 item" id="logo">OLAALO</div>
@@ -54,11 +54,11 @@
                  <div class="userImg">
                      <img src="../images/reddit2.jpg" height="40px"  style="border-radius: 100px; "  "alt="">
                  </div>
-                 
-                 <div class="userName">
-                     <h4 >Spunky_Monkey</h4>
+
+                 <div class="userName" id="userName">
+                     <!-- <h4 >Spunky_Monkey</h4>
                      <h4>Nasir Iyidemilade</h4>
-                     <h4>Ladenas202@gmail.com</h4>
+                     <h4>Ladenas202@gmail.com</h4> -->
 
                  </div>
              </div>
