@@ -78,7 +78,7 @@ function getUserInfo(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const userID = urlParams.get('userID')
-    console.log(userID)
+    // console.log(userID)
     fetch(`${APIurl}/users/${userID}`)
     .then(function(response){
         return response.json()
@@ -100,27 +100,47 @@ function displayInfo(element){
  function albumPageRequest(){
      const queryString = window.location.search;
      const urlParams = new URLSearchParams(queryString);
-     const userID = urlParams.get('UserID')
-     console.log(userID)
+     const userID = urlParams.get('userID')
+    //  console.log(userID)
      fetch(`${APIurl}/users/${userID}/albums`)
      .then(function(response){
         return response.json()
     })
     .then((response) => {
-        console.log(response)
+        // console.log(response)
         var result = document.getElementById('album-body')
         // console.log(response)
         response.forEach(element => {
-                result.appendChild(albumPageDisplay(response))                                
+                result.appendChild(albumPageDisplay(element))                                
         })
     })
 }
 
- function albumPageDisplay(element){
-     const AlbumPage = `
-     <div class="album-card-1">${element.title}</div>
-   `
+function albumPageDisplay(element){
+     const AlbumPage = `<div class="album-card-1">${element.title}</div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
+ }
+function pass_album(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userID = urlParams.get('userID')
+    // console.log(userID)
+    fetch(`${APIurl}/users/${userID}`)
+    .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        console.log(response)
+        var result = document.getElementById('btn-spc')
+                result.appendChild(albumURL(response))                                
+        })
+   
+}
+ function albumURL(element){
+     const albUrl= `<hr>
+     <a href="./album.html?userID=${element.id}"><button class="btn-lenght">Album</button></a>`
+     return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
+
  }
 
 
