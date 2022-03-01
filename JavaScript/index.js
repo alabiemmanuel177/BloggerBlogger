@@ -69,7 +69,7 @@ function postPageRequest(){
         })
 }
 function postPageDisplay(element){
-    const postPage = `<h3 style="margin-bottom: 20px; text-transform: uppercase;">${element.title}</h3>
+    const postPage = `<h3 style="margin-bottom: 20px; text-transform: uppercase;"><a href="">${element.title}</a></h3>
     <h5>${element.body}</h5>`
     return new DOMParser().parseFromString(postPage, 'text/html').firstChild
 }
@@ -101,8 +101,9 @@ function displayInfo(element){
      const queryString = window.location.search;
      const urlParams = new URLSearchParams(queryString);
      const userID = urlParams.get('userID')
+    
     //  console.log(userID)
-     fetch(`${APIurl}/users/${userID}/albums`)
+   fetch(`${APIurl}/users/${userID}/albums`)
      .then(function(response){
         return response.json()
     })
@@ -142,5 +143,6 @@ function pass_album(){
      return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
 
  }
+
 
 

@@ -309,12 +309,13 @@ a{
   flex-wrap: wrap;
   justify-content: center;
  }
- .album-card-1{
+  .album-card-1{
    width: 400px;
    background-color: #fff;
-   margin: 50px;
+   margin-left: 50px;
    height: 300px;
- }
+   /* border: 50px solid black; */
+ } 
  .pagePhotoBody{
   text-align: center;
   background-color: rgb(182, 212, 224);
