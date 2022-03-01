@@ -160,7 +160,7 @@ div.content {
 .commentCard{
   border-bottom: 1px solid black;
   padding: 20px;
-  background-color: white;
+  background-color: rgb(247, 230, 199);
   margin-bottom: 20px;
   border-radius: 8px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -318,7 +318,7 @@ a{
    background-color: #fff;
    margin: 50px;
    height: 300px;
-   justify-items: center;
+   
    /* border: 50px solid black; */
  } 
  .pagePhotoBody{
@@ -527,7 +527,10 @@ body {
   margin-bottom: 20px;
   border-radius: 5px;
   margin-right: 10%;
+  
 }
+
+
 
 .comments{
   display: block;
