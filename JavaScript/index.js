@@ -15,8 +15,7 @@ function postRequest(){
     }
 function postDisplay(element){
     const holder = `<a href="./post.html?postID=${element.id}&userID=${element.userId}" ><div class="commentCard">
-        <p id= "postId" > ${element.id} </p>
-        <a>Username</a>
+        <!--<p id= "postId" > ${element.id} </p>-->
         <h2 id='result'style="text-transform: uppercase;>
             ${element.title}
         </h2>
