@@ -123,7 +123,7 @@ function displayInfo(element){
 function albumPageDisplay(element){
      const AlbumPage = `
      
-     <div class="album-card-1"style="text-transform: uppercase;"><a href="">${element.title}</a></div>`
+     <div class="album-card-1"style="text-transform: uppercase;"><a href="./photo.html?albumID=${element.id}">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
     
      
@@ -149,6 +149,37 @@ function pass_album(){
      <a href="./album.html?userID=${element.id}&userName=${element.username}"><button class="btn-lenght">Album</button></a>`
      return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
      }
+function albumUserName(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userName = urlParams.get('userName')
+    console.log(userName)
 
+    var result = document.getElementById('album-head1')
+        result.append(`Welcome to ${userName}'s Album`)
+}
+function pass_photo(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const albumID = urlParams.get('albumID')
+    // console.log(userID)
+    fetch(`${APIurl}/albums/${albumID}/photos`)
+    .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        // console.log(response)
+        var result = document.getElementById('photo-body')
+        response.forEach(element => {
+            result.appendChild(photoURL(element))
+        })                                                
+        })
+   
+}
+ function photoURL(element){
+     const holder= `<hr>
+     <div class="photo-card-1"><img src="${element.url}"></div>`
+     return new DOMParser().parseFromString(holder, 'text/html').firstChild
+     }
 
 
