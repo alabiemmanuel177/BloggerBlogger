@@ -49,8 +49,12 @@ function commentRequest(){
 }
 
 function commentDisplay(element){
-    const commentholder = `<h3 class="Margin-style">${element.name}</h4>
-    <h4 class="Margin-style2">${element.body}</h4>`
+    const commentholder = `
+    <div class="Comments">
+    <h3 class="Margin-style; "  style="text-transform: uppercase; margin-bottom:15px">${element.name}</h4>
+    <h4 class="Margin-style2">${element.body}</h4>
+    </div>`
+    
     return new DOMParser().parseFromString(commentholder, 'text/html').firstChild
 }
 function postPageRequest(){
@@ -90,7 +94,7 @@ function getUserInfo(){
 }
 
 function displayInfo(element){
-    const infoPage = ` <h4>${element.name}</h4>
+    const infoPage = `<h4>${element.name}</h4>
     <h4>${element.username}</h4>
     <h4>${element.email}</h4>`
     return new DOMParser().parseFromString(infoPage, 'text/html').firstChild
@@ -117,8 +121,12 @@ function displayInfo(element){
 }
 
 function albumPageDisplay(element){
-     const AlbumPage = `<div class="album-card-1"style="text-transform: uppercase;">${element.title}</div>`
+     const AlbumPage = `
+     
+     <div class="album-card-1"style="text-transform: uppercase;"><a href="">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
+    
+     
  }
 function pass_album(){
     const queryString = window.location.search;
@@ -138,10 +146,9 @@ function pass_album(){
 }
  function albumURL(element){
      const albUrl= `<hr>
-     <a href="./album.html?userID=${element.id}"><button class="btn-lenght">Album</button></a>`
+     <a href="./album.html?userID=${element.id}&userName=${element.username}"><button class="btn-lenght">Album</button></a>`
      return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
-
- }
+     }
 
 
 
