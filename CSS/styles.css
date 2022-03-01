@@ -1,8 +1,3 @@
-/* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
 #logo:hover{
   background-color:transparent !important;
   color: orange;
@@ -312,6 +307,7 @@ a{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
  }
  .album-card-1{
    width: 400px;
@@ -329,8 +325,10 @@ a{
 .photo-body{
  display: flex;
  flex-direction: row;
- /* margin: 50px; */
+ margin: 50px;
  flex-wrap: wrap;
+ justify-content: center;
+
 }
 .photo-card-1{
   width: 400px;
@@ -338,7 +336,6 @@ a{
   margin: 50px;
   height: 300px;
 }
-
 .pstPic {
   /* padding: 150px; */
   border-top: 20px solid white;
@@ -351,7 +348,6 @@ a{
   background-color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .usrDetails {
    background-color: white;
   width: 30%;
@@ -360,10 +356,8 @@ a{
   flex-direction: column;
    height: 250px !important;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
 }
-
 .picHolder {
   display: flex;
   flex-direction: row;
@@ -372,15 +366,12 @@ a{
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 50px;
-  margin-top: 30px;
-  
-  /* width: 80%; */
+  margin-top: 30px;  
 }
 body {
   /* background-color: whitesmoke; */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .responsive {
   width: 100%;
   height: auto;
@@ -389,7 +380,6 @@ body {
   width: 100%;
   margin-bottom: 20px;
 }
-
 .top {
   background-color: orange;
   border-radius: 5px 5px 0px 0px;
@@ -399,7 +389,6 @@ body {
   margin-bottom: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 @media screen and (max-width: 600px) {
   .top {
     font-size: 10px;
@@ -417,14 +406,12 @@ body {
     height: 200px !important;
   }
 }
-
 .bottom {
   padding-left: 10px;
   padding-right: 10px;
   float: right;
   /* padding: 10px; */
 }
-
 .userHolder {
   display: flex;
   flex-direction: row;
@@ -434,40 +421,28 @@ body {
   width: 100%;
   margin-bottom: 15px;
 }
-
 .userImg {
   position: relative;
   /* margin-left: 150px;] */
   /* width: 50%; */
-  
-
 }
-
 .userName h4 {
   position: relative;
   /* width: 50%; */
   margin-right: 20px;
   margin-left: 20px;
 }
-
 @media screen and (max-width: 700px) {
     .usrDetails{
         display: none;
     }
-
     .pstPic{
         width: 100%;
-    }
- 
+    } 
 }
-
-
 @media screen and (max-width: 800px) {
-
     .userName h4 {
         font-size: 10px;
-
-
 }
 }
 .static {
@@ -476,13 +451,11 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-top: 15px;
 }
-
 .p2 {
   position: relative;
   top: 5px;
   margin-bottom: 15px;
 }
-
 .btn-lenght {
   width: 100%;
   background-color: orange;
@@ -494,67 +467,49 @@ body {
   font-size: 15px;
   margin-top: 20px;
 }
-
 .btn-spc{
     /* padding: 10px; */
     padding-left: 10px;
-    padding-right: 10px;
-    
-
+    padding-right: 10px; 
 }
-
 .Margin-style{
   margin-bottom: 20px;
   margin-top: 10px;
 }
-
 .Margin-style2{
   margin-bottom: 20px;
 }
 .btn-lenght:hover{
       background-color: rgb(255, 115, 0);
 }
-
 .Comments{
-  width: 40%;
-  
+  width: 40%;  
   background-color: rgb(247, 230, 199);
   padding: 10px;
   margin-left: 15%;
-  /* border: 5px solid white; */
   margin-bottom: 20px;
   border-radius: 5px;
   margin-right: 10%;
 }
-
 .comments{
   display: block;
-  flex-direction: column;
-  /* margin-left: 15%; */
-  
-  
+  flex-direction: column;  
 }
-
 .block{
   display: flex;
   flex-direction: column;
-
 }
-
 @media screen and (max-width: 700px) {
   .Comments{
     width: 80%;
     margin-left: 10%;
     margin-left: 10%;
   }
-
-  .commentsTitle{
+    .commentsTitle{
     margin-left: 60%;
-    margin-bottom: 20px;
-  
+    margin-bottom: 20px;  
 }
 }
-
 .commentsTitle{
     margin-left: 31%;
     margin-bottom: 20px;
