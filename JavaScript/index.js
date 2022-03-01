@@ -101,12 +101,9 @@ function displayInfo(element){
      const queryString = window.location.search;
      const urlParams = new URLSearchParams(queryString);
      const userID = urlParams.get('userID')
-<<<<<<< HEAD
     
-=======
     //  console.log(userID)
->>>>>>> 81da583b2fa38579455074bb1d83a3509d6d9b9f
-     fetch(`${APIurl}/users/${userID}/albums`)
+   fetch(`${APIurl}/users/${userID}/albums`)
      .then(function(response){
         return response.json()
     })
@@ -121,7 +118,7 @@ function displayInfo(element){
 }
 
 function albumPageDisplay(element){
-     const AlbumPage = `<div class="album-card-1">${element.title}</div>`
+     const AlbumPage = `<div class="album-card-1"><a href="">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
  }
 function pass_album(){
