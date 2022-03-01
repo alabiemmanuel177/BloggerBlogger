@@ -118,7 +118,7 @@ function displayInfo(element){
 }
 
 function albumPageDisplay(element){
-     const AlbumPage = `<div class="album-card-1"style="text-transform: uppercase;">${element.title}</div>`
+     const AlbumPage = `<div class="album-card-1"style="text-transform: uppercase;"><a href="">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
  }
 function pass_album(){

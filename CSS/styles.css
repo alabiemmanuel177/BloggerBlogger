@@ -316,8 +316,9 @@ a{
   .album-card-1{
    width: 400px;
    background-color: #fff;
-   margin-left: 50px;
+   margin: 50px;
    height: 300px;
+   justify-items: center;
    /* border: 50px solid black; */
  } 
  .pagePhotoBody{
