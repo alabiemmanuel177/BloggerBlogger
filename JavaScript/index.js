@@ -147,10 +147,33 @@ function pass_album(){
 }
  function albumURL(element){
      const albUrl= `<hr>
-     <a href="./album.html?userID=${element.id}"><button class="btn-lenght">Album</button></a>`
+     <a href="./album.html?userID=${element.id}&userName=${element.username}"><button class="btn-lenght">Album</button></a>`
      return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
 
  }
 
 
 
+function UserNameRequest(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userID = urlParams.get('userName')
+    console.log(userName)
+     fetch(`${APIurl}/users/${userName}`)
+    .then(function(response){
+        return response.json()
+    })
+    .then((response) => {
+        console.log(response)
+        var result = document.getElementById('album-head')
+                result.appendChild(albumURL(response))                                
+        })
+   
+}
+
+  function UserNameResult(element){
+     const albUsrName= `
+    <a class="album-head"> Welcome to User1 albums</a>`
+     return new DOMParser().parseFromString(albUrsName, 'text/html').firstChild
+
+ }
