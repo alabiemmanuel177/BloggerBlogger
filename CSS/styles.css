@@ -1,8 +1,8 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 #logo:hover{
   background-color:transparent !important;
   color: orange;
@@ -41,60 +41,42 @@
   padding: 10px;
   border-radius: 5px 5px;
 }
-.card{
-    
-   
-  padding-bottom: 30px;
+.card{   
+padding-bottom: 30px;
  height: 200px;
  padding-left: 10px;
  padding-right: 10px;
- padding-top: 10px;
- 
+ padding-top: 10px; 
 }
-
-.card2{
-  
- 
+.card2{ 
+padding-bottom: 30px;
+height: 200px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;}
+.card3{ 
 padding-bottom: 30px;
 height: 200px;
 padding-left: 10px;
 padding-right: 10px;
 padding-top: 10px;
-
 }
-.card3{
-  
- 
-padding-bottom: 30px;
-height: 200px;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 10px;
-
-}
-
 .cardBody{
-  display: flex;
- 
+  display: flex; 
 }
-
 .responsive{
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
-
 @media screen and (max-width: 700px) {
   .textSize{
       font-size: 12px;
   }
   .cardBody{
       display: block;
-  }
-  
+  }  
 }
-
 .textSize{
   position: relative;
   bottom: 140px;
@@ -105,12 +87,9 @@ padding-top: 10px;
 .body{ 
   width: 80%;    
   margin-left: 10%;
-  margin-right: 10%;
-  
+  margin-right: 10%;  
 }
-body{
-  background-color: whitesmoke;
-}
+
 
 .trend{
   color: grey; 
@@ -121,8 +100,6 @@ body{
   position: relative;
   /* top: px; */
 }
-
-
 @media screen and (max-width: 700px){
  .card2{
    display: none;
@@ -131,9 +108,6 @@ body{
    display: none;
  }
 }
-
-
-
 /* The side navigation menu */
 .sidebar {
   float: left;
@@ -144,7 +118,6 @@ body{
   height: 100%;
   overflow: auto;
 }
-
 /* Sidebar links */
 .sidebar a {
   display: block;
@@ -152,20 +125,16 @@ body{
   padding: 16px;
   text-decoration: none;
 }
-
 /* Links on mouse-over */
 .sidebar a.sub-heading:hover, a.active {
   background-color: orange;
   color: white;
 }
-
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property*/
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;}
-
-
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
@@ -176,29 +145,17 @@ div.content {
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
 }
-
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) { 
   .sidebar a {
     text-align: center;
     float: none;
   }}
-
-/* .card-body{
-  margin-top: 25%;
-} */
-
-
 .cardholder{
   display: flex;
   justify-content: space-evenly;
   margin-top: 150px;
   flex-direction: column;
-  /* align-items: center; */
-  
-}
-.Ccard h2{
-    color: rgb(49, 110, 126);
 }
 .commentCard{
   border-bottom: 1px solid black;
@@ -208,9 +165,6 @@ div.content {
   border-radius: 8px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: lighter;
-  
-  
-  /* width:100%; */
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -237,7 +191,7 @@ a{
   *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 .footer-container{
     background-color:#232629;
@@ -245,19 +199,13 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* justify-content: flex-end; */
-    /* align-items:center ;
-    justify-items: center; */
-    /* justify-content: center; */
-    
-}
+  }
 .footer-item {
     color: #fff;
     font-size: 20px;
     padding: 20px;
     margin:10px;
 }
-
 .footer-content-container{
     padding-top: 15px;
     font-size: 14px;
@@ -285,37 +233,26 @@ a{
     .items-1,.items-2,.items-3,.items-4{
         padding: 10px;            
     }
-}
-
-
-   
+}   
   @media screen and (max-width : 700px){
-
     .item-3{
       display: none;
-
     }
     .item-4{
       display: none;
     }
-
-    .Search-item{
-    
-    display: none;
-  
+    .Search-item{    
+    display: none;  
     }
     .item-2{
       display: none;
     }
-
   }
-
   @media screen and (min-width: 700px) {
     .stuff {
       display:none;
     }
-  }
-  
+  }  
   @media screen and (max-width: 700px) {
     .stuff {
       font-size: 10px;
@@ -330,20 +267,17 @@ a{
       margin-left: 20px;
     }
   }
-
   .dropbtn {
     background-color: #04AA6D;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
-  }
-  
+  }  
   .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
+  }  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -351,15 +285,13 @@ a{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
+  }  
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
+  }  
   .dropdown-content a:hover {background-color: orange;}
   
   .dropdown:hover .dropdown-content {display: block;}
@@ -368,12 +300,10 @@ a{
  .album-head {
    font-size: 35px;
    color: #fff;
-   
- }
+    }
  .pageBody{
    text-align: center;
    background-color: rgb(235, 205, 151);
-   /* width: 80%; */
    margin-right: 10%;
    margin-left: 10%;
    padding-top: 50px;
@@ -381,7 +311,6 @@ a{
  .album-body{
   display: flex;
   flex-direction: row;
-  /* margin: 50px; */
   flex-wrap: wrap;
  }
  .album-card-1{
@@ -393,7 +322,6 @@ a{
  .pagePhotoBody{
   text-align: center;
   background-color: rgb(182, 212, 224);
-  /* width: 80%; */
   margin-right: 10%;
   margin-left: 10%;
   padding-top: 50px;
@@ -449,7 +377,7 @@ a{
   /* width: 80%; */
 }
 body {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
