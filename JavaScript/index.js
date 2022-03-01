@@ -15,9 +15,9 @@ function postRequest(){
     }
 function postDisplay(element){
     const holder = `<a href="./post.html?postID=${element.id}&userID=${element.userId}" ><div class="commentCard">
-        <p id= "postId"> ${element.id} </p>
+        <p id= "postId" > ${element.id} </p>
         <a>Username</a>
-        <h2 id='result'>
+        <h2 id='result'style="text-transform: uppercase;>
             ${element.title}
         </h2>
         <h3 id="stuff">
@@ -69,7 +69,7 @@ function postPageRequest(){
         })
 }
 function postPageDisplay(element){
-    const postPage = `<h3 style="margin-bottom: 20px;">${element.title}</h3>
+    const postPage = `<h3 style="margin-bottom: 20px; text-transform: uppercase;"><a href="">${element.title}</a></h3>
     <h5>${element.body}</h5>`
     return new DOMParser().parseFromString(postPage, 'text/html').firstChild
 }
@@ -118,7 +118,7 @@ function displayInfo(element){
 }
 
 function albumPageDisplay(element){
-     const AlbumPage = `<div class="album-card-1"><a href="">${element.title}</a></div>`
+     const AlbumPage = `<div class="album-card-1"style="text-transform: uppercase;">${element.title}</div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
  }
 function pass_album(){
