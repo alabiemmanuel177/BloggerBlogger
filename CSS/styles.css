@@ -295,6 +295,7 @@ a{
  .album-head {
    font-size: 35px;
    color: #fff;
+   text-transform:uppercase;
     }
  .pageBody{
    text-align: center;
@@ -340,6 +341,7 @@ a{
   background-color: #fff;
   margin: 50px;
   height: 300px;
+  margin-bottom: 100px;
 }
 .pstPic {
   /* padding: 150px; */
@@ -521,3 +523,4 @@ body {
     margin-left: 31%;
     margin-bottom: 20px;
 }
+

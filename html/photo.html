@@ -8,7 +8,7 @@
         <script src="..\JavaScript\index.js"></script>
 		<title>Photo</title>
 	</head>
-	<body onload="pass_photo()">
+	<body onload="pass_photo() , AlbumTitleRequest()" >
 		<div class="navbar-container">			
             <div class="dropdown">
                 <a href=".\index.html"><div class="dropdown item-1 item" id="logo">OLAALO</div></a>
@@ -36,7 +36,7 @@
         </div>
         
         <div class="pagePhotoBody">
-            <a class="album-head"> Album Title album</a>
+            <a class="album-head" id="Photo-title"></a>
             <div class="photo-body" id="photo-body">
                 <!-- <div class="photo-card-1">1</div>
                 <div class="photo-card-1">2</div>

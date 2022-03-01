@@ -123,7 +123,7 @@ function displayInfo(element){
 function albumPageDisplay(element){
      const AlbumPage = `
      
-     <div class="album-card-1"style="text-transform: uppercase;"><a href="./photo.html?albumID=${element.id}">${element.title}</a></div>`
+     <div class="album-card-1"style="text-transform: uppercase;"><a href="./photo.html?albumID=${element.id}&albumTitle=${element.title}">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
     
      
@@ -177,9 +177,26 @@ function pass_photo(){
    
 }
  function photoURL(element){
-     const holder= `<hr>
-     <div class="photo-card-1"><img src="${element.url}"></div>`
+     const holder= `
+     <div class="photo-card-1" ><img src="${element.url}" width="400px" heigth="400px"></div>`
      return new DOMParser().parseFromString(holder, 'text/html').firstChild
      }
 
+
+     function AlbumTitleRequest(){
+          const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const albumTitle = urlParams.get('albumTitle')
+  
+        // console.log(response)
+        var result = document.getElementById('Photo-title')
+            result.append(`${albumTitle}`)
+                                                   
+}
+
+ function PhotoTitle(element){
+     const PhTititle= `${element.title}`
+    
+     return new DOMParser().parseFromString(PhTititle, 'text/html').firstChild
+     }
 
