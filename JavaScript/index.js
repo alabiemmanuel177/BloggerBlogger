@@ -100,7 +100,7 @@ function displayInfo(element){
  function albumPageRequest(){
      const queryString = window.location.search;
      const urlParams = new URLSearchParams(queryString);
-     const userID = urlParams.get('UserID')
+     const userID = urlParams.get('userID')
      console.log(userID)
      fetch(`${APIurl}/users/${userID}/albums`)
      .then(function(response){
@@ -111,7 +111,7 @@ function displayInfo(element){
         var result = document.getElementById('album-body')
         // console.log(response)
         response.forEach(element => {
-                result.appendChild(albumPageDisplay(response))                                
+                result.appendChild(albumPageDisplay(element))                                
         })
     })
 }
