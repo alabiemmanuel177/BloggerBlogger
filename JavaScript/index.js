@@ -1,17 +1,17 @@
 const APIurl = 'https://jsonplaceholder.typicode.com'
-function getPost(){      
+function getUserPost(){      
         fetch(`${APIurl}/posts`)
         .then(function(response){
             return response.json()
         })
         .then((response) => {
-            var result = document.getElementById('cardholder')            
+            let result = document.getElementById('cardholder')            
             response.forEach(element => {  
-                result.appendChild(displayPost(element))                                
+                result.appendChild(displayUsersPost(element))                                
         })
         })
     }
-function displayPost(element){
+function displayUsersPost(element){
     const holder = `<a href="./post.html?postID=${element.id}&userID=${element.userId}" ><div class="commentCard">
         <!--<p id= "postId" > ${element.id} </p>-->
         <h2 id='result'style="text-transform: uppercase;>
@@ -27,7 +27,7 @@ function displayPost(element){
 return new DOMParser().parseFromString(holder, 'text/html').firstChild
 }
 
-function getComments(){
+function getPostComments(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const postID = urlParams.get('postID')
@@ -36,14 +36,14 @@ function getComments(){
         return response.json()
     })
     .then((response) => {
-        var result = document.getElementById('commentholder')
+        let result = document.getElementById('commentholder')
         response.forEach(element => {
-            result.appendChild(displayComments(element))
+            result.appendChild(displayPostComments(element))
         })
     })
 }
 
-function displayComments(element){
+function displayPostComments(element){
     const commentholder = `
     <div class="Comments">
     <h3 class="Margin-style; "  style="text-transform: uppercase; margin-bottom:15px">${element.name}</h4>
@@ -61,7 +61,7 @@ function getPostPage(){
             return response.json()
         })
         .then((response) => {
-            var result = document.getElementById('postContent')
+            let result = document.getElementById('postContent')
                 result.appendChild(displayPostPage(response))                                
         })
 }
@@ -80,7 +80,7 @@ function getUserInfo(){
         return response.json()
     })
     .then((response) => {
-        var result = document.getElementById('userName')
+        let result = document.getElementById('userName')
                 result.appendChild(displayUserInfo(response))                                
         })
 }
@@ -92,7 +92,7 @@ function displayUserInfo(element){
     return new DOMParser().parseFromString(infoPage, 'text/html').firstChild
 }
 
- function getAlbumPage(){
+ function getUserAlbum(){
      const queryString = window.location.search;
      const urlParams = new URLSearchParams(queryString);
      const userID = urlParams.get('userID')    
@@ -101,14 +101,14 @@ function displayUserInfo(element){
         return response.json()
     })
     .then((response) => {
-        var result = document.getElementById('album-body')
+        let result = document.getElementById('album-body')
         response.forEach(element => {
-                result.appendChild(displayAlbumPage(element))                                
+                result.appendChild(displayUserAlbum(element))                                
         })
     })
 }
 
-function displayAlbumPage(element){
+function displayUserAlbum(element){
      const AlbumPage = `<div class="album-card-1"style="text-transform: uppercase;"><a href="./photo.html?albumID=${element.id}&albumTitle=${element.title}">${element.title}</a></div>`
      return new DOMParser().parseFromString(AlbumPage, 'text/html').firstChild
     
@@ -124,12 +124,12 @@ function getAlbum(){
     })
     .then((response) => {
         console.log(response)
-        var result = document.getElementById('btn-spc')
-                result.appendChild(linkAlbumURL(response))                                
+        let result = document.getElementById('btn-spc')
+                result.appendChild(passAlbumUrl(response))                                
         })
    
 }
- function linkAlbumURL(element){
+ function passAlbumUrl(element){
      const albUrl= `<hr>
      <a href="./album.html?userID=${element.id}&userName=${element.username}"><button class="btn-lenght">Album</button></a>`
      return new DOMParser().parseFromString(albUrl, 'text/html').firstChild
@@ -139,7 +139,7 @@ function getAlbumUserName(){
     const urlParams = new URLSearchParams(queryString);
     const userName = urlParams.get('userName')
     console.log(userName)
-    var result = document.getElementById('album-head1')
+    let result = document.getElementById('album-head1')
         result.append(`Welcome to ${userName}'s Album`)
 }
 function getPhoto(){
@@ -151,7 +151,7 @@ function getPhoto(){
         return response.json()
     })
     .then((response) => {
-        var result = document.getElementById('photo-body')
+        let result = document.getElementById('photo-body')
         response.forEach(element => {
             result.appendChild(getPhotoURL(element))
         })                                                
@@ -169,7 +169,7 @@ function getAlbumTitle(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const albumTitle = urlParams.get('albumTitle')
-    var result = document.getElementById('Photo-title')
+    let result = document.getElementById('Photo-title')
         result.append(`${albumTitle}`)
                                         
 }
